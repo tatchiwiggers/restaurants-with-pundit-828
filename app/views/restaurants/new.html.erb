@@ -1,0 +1,9 @@
+<h1>New Restaurant</h1>
+
+<%= render 'form', restaurant: @restaurant %>
+
+<%= link_to 'Back', restaurants_path %>
+
+<% if policy(Restaurant).create? %>
+  <%= link_to "New restaurant", new_restaurant_path %>
+<% end %>
